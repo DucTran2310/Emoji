@@ -25,6 +25,9 @@
         "start": "craco start",
         "build": "craco build",
         "test": "craco test"
+        "predeploy": "react-scripts build",
+        "deploy": "gh-pages -d build"
+
     },
     "cracoConfig": "craco.config.js",
     "eslintConfig": {
@@ -47,5 +50,8 @@
     },
     "resolutions": {
         "styled-components": "^5"
+    },
+    "devDependencies": {
+        "gh-pages": "^3.2.3"
     }
 }
