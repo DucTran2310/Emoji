@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import EmojiList from "../EmojiList/EmojiList";
+import EmojiList from "@components/EmojiList/EmojiList";
 import { SearchBar, SearchBarForm, InputSearch } from "./styles";
 
 function InputBar() {

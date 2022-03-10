@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { emoCopy } from "@components/emojiCopyState";
+import { useRecoilState } from "recoil";
 import { EmojiItem, EmojiSymbol, EmojiTitle, EmojiCopy } from "./styles";
-
 interface EmojiRow {
     emojiData: {
         title: string;
@@ -9,7 +9,7 @@ interface EmojiRow {
 }
 
 function EmojiRow({ emojiData }: EmojiRow) {
-    const [emojiCopy, setEmojiCopy] = useState("Copy Emoji!!!");
+    const [emojiCopy, setEmojiCopy] = useRecoilState(emoCopy);
 
     const handleEmojiClick = () => {
         navigator.clipboard.writeText(emojiData.title);
