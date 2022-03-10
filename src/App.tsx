@@ -1,4 +1,4 @@
-import InputBar from "./components/Input_Value/Input_Value";
+import InputBar from "@components/Input_Value/Input_Value";
 
 import { Container, Title } from "./app_styles";
 

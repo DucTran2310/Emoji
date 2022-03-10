@@ -1,13 +1,18 @@
-import emojiList from "../../data/emojiList.json";
+// import emojiList from "@data/emojiList.json";
 
-import EmojiRow from "../EmojiRow/EmojiRow";
+import EmojiRow from "@components/EmojiRow/EmojiRow";
 import { EmojiListContainer } from "./styles";
+import { useRecoilValue } from "recoil";
+import { emojiListState } from "@components/emojiState";
 
 interface EmojiListProps {
     keyword: string;
 }
 
 function EmojiList({ keyword }: EmojiListProps) {
+    // useRecoilValue
+    const emojiList = useRecoilValue(emojiListState);
+
     // filter emoji by title and keywords
     function filterEmoji(searchText: string, maxResults: number) {
         return emojiList
@@ -24,6 +29,7 @@ function EmojiList({ keyword }: EmojiListProps) {
     }
 
     const emoList = filterEmoji(keyword, 20);
+    // console.log(emoList);
 
     return (
         <EmojiListContainer>
